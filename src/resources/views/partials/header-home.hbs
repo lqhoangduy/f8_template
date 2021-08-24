@@ -1,0 +1,192 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-transparent navbar-fixed">
+  <div class="container">
+    <div class="header__navbar">
+        <div class="navbar__logo">
+          <a class="navbar__brand" href="/">
+            <img src="/img/logo.png" alt="F8 logo">
+          </a>
+        </div>
+        <div class="navbar__content hidden-md-sm">
+          <ul class="navbar__content-list">
+            <li class="navbar__content-item">
+              <a href="/">Trang chủ</a>
+            </li>
+            <li class="navbar__content-item">
+              <a href="/courses">Khoá học</a>
+            </li>
+            <li class="navbar__content-item navbar-menu">
+              <a href="#">Cộng đồng</a>
+              <ul class="navbar-submenu">
+                <li>
+                  <a target="_blank" rel="noopener noreferrer" href="https://url.mycv.vn?ref=f8_header&amp;to=f8_youtube">F8 Official Channel</a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener noreferrer" href="https://url.mycv.vn?ref=f8_header&amp;to=f8_fb_group">F8 Facebook Group</a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener noreferrer" href="https://url.mycv.vn?ref=f8_header&amp;to=mycv_signed">F8 tạo CV xin việc</a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/SơnĐặngF8?sub_confirmation=1">Channel Sơn Đặng</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar__right__box">
+          <div class="navbar__avatar hidden-md-sm">
+            <p>D</p>
+          </div>
+
+          <div class="navbar__name__user hidden-md-sm">
+            <p>Hoàng Duy</p>
+          </div>
+          <div class="navbar__separate hidden-md-sm"></div>
+          <div class="navbar__notify">
+            <div class="navbar__my__course" data-toggle="tooltip" data-placement="bottom" title="Khoá học của tôi">
+              <a href="/me/stored/courses"><i class="navbar__my__course-icon fas fa-bookmark"></i></a>
+            </div>
+
+            <div class="navbar__bell" data-toggle="tooltip" data-placement="bottom" title="Thông báo">
+              <i class="navbar__bell-icon fas fa-bell"></i>
+              <div class="navbar-notification-wrap">
+                <div class="navbar-notification-header">
+                  <h6>Thông báo</h6>
+                  <span>Đánh dấu tất cả đã đọc</span>
+                </div>
+                <ul class="navbar-notification-list">
+                  <li class="navbar-notification-item">
+                    <div class="navbar-notification-avatar">
+                      <img src="https://fullstack.edu.vn/assets/images/f8_avatar.png" alt="">
+                    </div>
+                    <div class="navbar-notification-info">
+                      <div class="navbar-notification-content">
+                        <strong>Hoàng Duy</strong>
+                        <span>đã thích một bình luận của bạn.</span>
+                      </div>
+                      <div class="navbar-notification-time">
+                        2 tháng trước
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="navbar-notification-item">
+                    <div class="navbar-notification-avatar">
+                      <img src="https://fullstack.edu.vn/assets/images/f8_avatar.png" alt="">
+                    </div>
+                    <div class="navbar-notification-info">
+                      <div class="navbar-notification-content">
+                        <strong>Hoàng Duy</strong>
+                        <span>đã thích một bình luận của bạn.</span>
+                      </div>
+                      <div class="navbar-notification-time">
+                        2 tháng trước
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="navbar-notification-item">
+                    <div class="navbar-notification-avatar">
+                      <img src="https://fullstack.edu.vn/assets/images/f8_avatar.png" alt="">
+                    </div>
+                    <div class="navbar-notification-info">
+                      <div class="navbar-notification-content">
+                        <strong>Hoàng Duy</strong>
+                        <span>đã thích một bình luận của bạn.</span>
+                      </div>
+                      <div class="navbar-notification-time">
+                        2 tháng trước
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="navbar__setting hidden-md-sm" data-toggle="tooltip" data-placement="bottom" title="Cá nhân">
+              <i class="navbar__setting-icon fas fa-sort-down"></i>
+              <ul class="more-menu-navbar">
+                <li class="more-menu-navbar-item">
+                  <i class="fas fa-cog more-menu-navbar-item-icon"></i>
+                  <span>Cài đặt</span>
+                </li>
+                <li class="more-menu-navbar-item">
+                  <i class="fas fa-folder-plus more-menu-navbar-item-icon"></i>
+                  <a href="/courses/create">Đăng khoá học</a>
+                </li>
+                <li class="more-menu-navbar-item">
+                  <i class="fas fa-sign-out-alt more-menu-navbar-item-icon"></i>
+                  <span>Đăng xuất</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header-bars hidden-lg ">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var navbar = document.querySelector('.navbar');
+      var navbarSetting = $('.navbar__setting');
+      var navbarMoreMenu = $('.more-menu-navbar');
+      var navbarBell = $('.navbar__bell');
+      var navbarNotification = $('.navbar-notification-wrap');
+
+      $(window).scroll(function(e) {
+          var pos_body = $('html, body').scrollTop();
+
+          if(pos_body > 60) {
+            navbar.classList.remove('navbar-transparent');
+            navbar.classList.add('bg-black');
+          } else {
+            navbar.classList.remove('bg-black');
+            navbar.classList.add('navbar-transparent');
+          }
+      });
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+
+      if(navbarSetting) {
+        var isHidden = true;
+        navbarSetting.click(function() {
+          navbarSetting.toggleClass('active');
+          isHidden = !navbarSetting.hasClass('active');
+        });
+        $(document).click(function(event) { 
+          $target = $(event.target);
+          if(!($target.closest('.more-menu-navbar').length || $target.closest('.navbar__setting').length) && !isHidden) {
+            navbarSetting.removeClass('active');
+          }        
+        });
+        navbarMoreMenu.click(function(e) {
+          e.stopPropagation();
+        })
+      };
+
+      //click navbarBell
+      if(navbarBell) {
+        var isNotificationHidden = true;
+        navbarBell.click(function() {
+          navbarBell.toggleClass('active');
+          isNotificationHidden = !navbarBell.hasClass('active');
+        });
+        $(document).click(function(event) { 
+          $target = $(event.target);
+          if(!($target.closest('.navbar-notification-wrap').length || $target.closest('.navbar__bell').length) && !isNotificationHidden) {
+            navbarBell.removeClass('active');
+          }        
+        });
+        navbarNotification.click(function(e) {
+          e.stopPropagation();
+        })
+      };
+    })
+</script>
